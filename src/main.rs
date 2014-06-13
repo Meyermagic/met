@@ -2,6 +2,8 @@
 
 #[phase(plugin, link)]
 extern crate log;
+extern crate capnp;
+extern crate capnp_rpc = "capnp-rpc";
 extern crate metaphor = "libmetaphor";
 
 use std::os;

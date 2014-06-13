@@ -42,7 +42,8 @@ impl MetCommand for Command {
 		//fs::mkdir(&db_dir, io::UserDir);
 
 		// Create empty databases
-		let db_names = vec!("tag.db", "commit.db", "changeseq.db", "change.db", "patch.db");
+		let db_names = vec!("tag.db", "commit.db", "changeseq.db", "change.db", "patch.db",
+			                  "forward.db", "backward.db");
 		for &db_name in db_names.iter() {
 			let db_path = met_root.join(db_name);
 			let mut db_file = io::File::create(&db_path);
